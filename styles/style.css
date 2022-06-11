@@ -11,18 +11,6 @@
   position: relative;
 }
 
-.logo {
-  position: absolute;
-  height: 32px;
-  width: 228px;
-}
-
-.logo_place_header {
-  position: absolute;
-  top: 30px;
-  left: 64px;
-}
-
 .header {
   padding: 0;
   margin: 0;
@@ -35,6 +23,18 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.logo {
+  position: absolute;
+  height: 32px;
+  width: 228px;
+}
+
+.logo_place_header {
+  position: absolute;
+  top: 30px;
+  left: 64px;
 }
 
 .header__title {
@@ -68,11 +68,65 @@
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
   position: absolute;
-  top: 64px;
+  bottom: 124px;
   right: 0;
   height: 568px;
   width: 568px;
   background-color: #2f80ed;
+}
+
+.content {
+  margin: 0 auto;
+}
+
+.description {
+  margin: 100px 0;
+  border: 1px solid #f2f2f2;
+}
+
+.description_flex_row {
+  display: flex;
+  justify-content: center;
+}
+
+.two-columns {
+  width: 80%;
+}
+
+.two-columns_flex_row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.two-columns__brief {
+  width: 175px;
+}
+
+.two-columns__brief__title {
+  margin: 0;
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: normal;
+  color: #2f80ed;
+}
+
+.two-columns__main-text {
+  width: 80%;
+  min-width: 784px;
+}
+
+.two-columns__main-text__paragraph {
+  line-height: 34px;
+  font-size: 24px;
+  margin: 0;
+}
+
+.two-columns__main-text__paragraph__span-accent {
+  font-weight: bold;
+}
+
+.two-columns__main-text__paragraph_margin_bottom {
+  margin-bottom: 30px;
 }
 
 /* и элемента с модификатором вида ключ-значение */
