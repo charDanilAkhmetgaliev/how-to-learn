@@ -5,10 +5,9 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
   border-left: 1px solid #BFBFBF;
   border-right: 1px solid #BFBFBF;
-  box-sizing: border-box;
 }
 
-/* header */
+/* блок header */
 
 .header {
   padding: 0;
@@ -21,8 +20,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-sizing: border-box;
-  border-bottom: 1px solid #bfbfbf;
 }
 
 .logo {
@@ -64,7 +61,6 @@
   z-index: 1;
 }
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
   position: absolute;
   bottom: 124px;
@@ -84,8 +80,6 @@
 }
 
 .content-container {
-  border-top: 1px solid #bfbfbf;
-  border-bottom: 1px solid #bfbfbf;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -96,7 +90,6 @@
 .description {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 .description__content-container {
@@ -146,7 +139,7 @@
   padding: 0;
   margin: 0;
   width: 100%;
-  box-sizing: border-box;
+
 }
 
 .digits__content-container {
@@ -160,7 +153,6 @@
   line-height: 1.15;
   font-size: 60px;
   font-weight: 700;
-
 }
 
 .section-subtitle {
@@ -170,7 +162,6 @@
   line-height: 34px;
   font-size: 24px;
   font-weight: 400;
-
 }
 
 .table {
@@ -191,7 +182,6 @@
   flex-direction: column;
   flex-wrap: wrap;
   gap: 20px;
-
 }
 
 .table__heading {
@@ -215,11 +205,8 @@
   padding: 100px 0 0;
   width: 100%;
   background-color: #f2f2f2;
-  border-top: 1px solid #bfbfbf;
-  border-bottom: 1px solid #bfbfbf;
   position: relative;
   min-height: 500px;
-  box-sizing: border-box;
 }
 
 .feynman__content-container {
@@ -227,18 +214,15 @@
   margin: 0;
   padding: 0;
   height: 790px;
-
   background-image: url(../images/feynman.png);
   background-repeat: no-repeat;
   background-position: left bottom;
   background-size: 867px 637px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   gap: 70px;
-
   border: none;
 }
 
@@ -247,7 +231,6 @@
   padding: 0;
   width: 648px;
   text-align: center;
-
   line-height: 1.15;
   font-size: 120px;
   font-weight: 700;
@@ -257,7 +240,6 @@
   margin: 0;
   padding: 0;
   text-align: center;
-
   line-height: 51px;
   font-size: 36px;
   font-weight: 400;
@@ -280,8 +262,6 @@
 /* Секция kufman */
 
 .kaufman {
-  border-top: 1px solid #BFBFBF;
-  border-bottom: 1px solid #BFBFBF;
   position: relative;
   background-color: #1f1f1f;
   overflow: hidden;
@@ -303,11 +283,15 @@
 }
 
 .kaufman__triangle {
+  margin: 0;
+  padding: 0;
+  background-image: url(../images/kaufman-triangle.svg);
+  background-repeat: no-repeat;
+  background-size: 880px 870px;
   position: absolute;
   width: 877px;
   height: 877px;
-  top: -2px;
-  right: -214px;
+  right: -210px;
   z-index: 1;
 }
 
@@ -323,13 +307,9 @@
 .footer {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   width: 100%;
   background-color: #1f1f1f;
-  min-height: 500px;
-  border: 1px solid red;
   min-height: 350px;
-
   display: flex;
   justify-content: center;
 }
@@ -338,7 +318,6 @@
   padding: 0;
   margin: 0;
   width: 90%;
-  border: 1px solid red;
   margin-top: 60px;
   margin-bottom: 40px;
   display: flex;
@@ -346,19 +325,17 @@
 }
 
 .footer__column {
-  border: 1px solid red;
-
+  display: flex;
+  flex-direction: column;
 }
 
 .footer__column_content_copyright {
   flex-basis: 711px;
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .logo_place_footer {
-  border: 1px solid red;
   width: 228px;
   height: 32px;
 }
@@ -366,15 +343,53 @@
 .footer__author-container {
   padding: 18px 0;
   margin: 0;
-  border: 1px solid red;
   color: white;
 }
 
 .footer__author {
   margin: 0;
-  width: auto;
-  height: auto;
-  border: 1px solid red;
+  line-height: 25px;
+  font-size: 18px;
 }
 
+.footer__column_content_info {
+  color: white;
+  gap: 20px;
+}
 
+.footer__column-heading {
+  padding: 0;
+  margin: 0;
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.footer__column-links {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.footer__column-link {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.footer__column_content_social {
+  color: white;
+  gap: 20px;
+}
+
+.footer__social-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
