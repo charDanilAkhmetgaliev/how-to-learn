@@ -7,22 +7,27 @@
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  border: 1px solid maroon;
-  position: relative;
+  border-left: 1px solid #BFBFBF;
+  border-right: 1px solid #BFBFBF;
+  box-sizing: border-box;
 }
+
+/* header */
 
 .header {
   padding: 0;
   margin: 0;
-  position: relative;
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
+  position: relative;
   /* выше установили ограничения для секции */
   background-color: #f2f2f2;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-sizing: border-box;
+  border-bottom: 1px solid #bfbfbf;
 }
 
 .logo {
@@ -79,23 +84,29 @@
   margin: 0 auto;
 }
 
+/* Секция description */
+
 .description {
-  margin: 100px 0;
-  border: 1px solid #f2f2f2;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.description_flex_row {
-  display: flex;
-  justify-content: center;
+.description__content {
+  margin-top: 100px;
+  border-top: 1px solid #bfbfbf;
+  border-bottom: 1px solid #bfbfbf;
 }
 
 .two-columns {
   width: 80%;
+  margin: 0 auto;
 }
 
 .two-columns_flex_row {
   display: flex;
   justify-content: space-between;
+  min-height: 300px;
 }
 
 .two-columns__brief {
@@ -113,6 +124,10 @@
 .two-columns__main-text {
   width: 80%;
   min-width: 784px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .two-columns__main-text__paragraph {
@@ -125,8 +140,175 @@
   font-weight: bold;
 }
 
-.two-columns__main-text__paragraph_margin_bottom {
-  margin-bottom: 30px;
+/* секция digits */
+
+.digits {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.content-container {
+  border-top: 1px solid #bfbfbf;
+  border-bottom: 1px solid #bfbfbf;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.digits__content-container {
+  margin: 100px 0;
+}
+
+.section-title {
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: 700;
+
+}
+
+.section-subtitle {
+  width: 60%;
+  text-align: center;
+  margin: 20px 0 0;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: 400;
+
+}
+
+.table {
+  padding: 0;
+  margin: 0 auto;
+  width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-decoration: none;
+}
+
+.table__cell {
+  margin: 60px 0 0;
+  padding: 0;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+
+}
+
+.table__heading {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 700;
+
+}
+
+.table__text {
+  line-height: 1.2;
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+
+}
+
+/* Секция feynman */
+
+.feynman {
+  margin: 0;
+  padding: 100px 0 0;
+  width: 100%;
+  background-color: #f2f2f2;
+  border-top: 1px solid #bfbfbf;
+  border-bottom: 1px solid #bfbfbf;
+  position: relative;
+  min-height: 500px;
+  box-sizing: border-box;
+}
+
+.faynman__content {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 790px;
+
+  background-image: url(../images/feynman.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 867px 637px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 70px;
+}
+
+.faynman__title {
+  margin: 0;
+  padding: 0;
+  width: 648px;
+  text-align: center;
+
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: 700;
+}
+
+.faynman__subtitle {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.faynman__link {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  right: 46px;
+  color: #2f80ed;
+  text-decoration: none;
+
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+/* Секция kufman */
+
+.kaufman {
+  border-top: 1px solid #BFBFBF;
+  border-bottom: 1px solid #BFBFBF;
+
+  background-color: #1f1f1f;
+  overflow: hidden;
+}
+
+.kaufman__contant-container {
+  margin: 90px 0;
+}
+
+.section-title_theme_dark {
+  color: white;
+}
+
+.section-subtitle_theme_dark {
+  color: white;
+}
+
+.kaufman__triangle {
+
 }
 
 /* и элемента с модификатором вида ключ-значение */
@@ -136,4 +318,3 @@
   margin-right: 0;
   margin-top: 80px;
 }
-
