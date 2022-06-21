@@ -1,10 +1,12 @@
+:link:hover {
+  text-decoration: underline;
+}
+
 .page {
   min-width: 1100px;
   max-width: 1600px;
   margin: 0 auto;
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  border-left: 1px solid #BFBFBF;
-  border-right: 1px solid #BFBFBF;
 }
 
 /* блок header */
@@ -20,6 +22,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
 }
 
 .logo {
@@ -34,7 +37,8 @@
 }
 
 .header__title {
-  width: 730px;
+  margin: 0;
+  max-width: 730px;
   line-height: 96px;
   margin-left: 64px;
   z-index: 2;
@@ -43,10 +47,12 @@
 }
 
 .header__subtitle {
+  margin: 0;
   position: absolute;
   bottom: 30px;
   left: 64px;
-  width: 388px;
+  width:100%;
+  max-width: 388px;
   line-height: 25px;
   z-index: 2;
   font-size: 18px;
@@ -59,11 +65,12 @@
   bottom: 0;
   right: 0;
   z-index: 1;
+  object-fit: cover;
 }
 
 .header__square-pic {
   position: absolute;
-  bottom: 124px;
+  top: 64px;
   right: 0;
   height: 568px;
   width: 568px;
@@ -79,12 +86,6 @@
   margin: 0 auto;
 }
 
-.content-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 /* Секция description */
 
 .description {
@@ -92,16 +93,11 @@
   padding: 0;
 }
 
-.description__content-container {
-  margin-top: 100px;
-}
-
 .two-columns {
   width: 80%;
-  margin: 0;
+  margin: 100px auto;
   display: flex;
   justify-content: space-between;
-  min-height: 300px;
 }
 
 .two-columns__brief {
@@ -136,20 +132,18 @@
 /* секция digits */
 
 .digits {
-  padding: 0;
+  padding: 100px 0;
   margin: 0;
   width: 100%;
-
-}
-
-.digits__content-container {
-  margin: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .section-title {
   width: 60%;
   text-align: center;
-  margin: 0 auto;
+  margin: 0;
   line-height: 1.15;
   font-size: 60px;
   font-weight: 700;
@@ -207,36 +201,33 @@
   background-color: #f2f2f2;
   position: relative;
   min-height: 500px;
-}
+  min-height: 890px;
+  box-sizing: border-box;
 
-.feynman__content-container {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  height: 790px;
   background-image: url(../images/feynman.png);
   background-repeat: no-repeat;
   background-position: left bottom;
   background-size: 867px 637px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   gap: 70px;
-  border: none;
 }
 
-.faynman__title {
+.feynman__title {
   margin: 0;
   padding: 0;
-  width: 648px;
+  width: 100%;
+  max-width: 648px;
   text-align: center;
   line-height: 1.15;
   font-size: 120px;
   font-weight: 700;
 }
 
-.faynman__subtitle {
+.feynman__subtitle {
   margin: 0;
   padding: 0;
   text-align: center;
@@ -245,12 +236,12 @@
   font-weight: 400;
 }
 
-.faynman__link {
+.feynman__link {
   margin: 0;
   padding: 0;
   position: absolute;
   top: 50%;
-  right: 46px;
+  right: 48px;
   color: #2f80ed;
   text-decoration: none;
 
@@ -262,44 +253,61 @@
 /* Секция kufman */
 
 .kaufman {
+  padding: 90px 0;
   position: relative;
   background-color: #1f1f1f;
   overflow: hidden;
-  z-index: 0;
-}
+  z-index: 1;
 
-.kaufman__content-container {
-  position: relative;
-  margin: 90px 0;
-  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .section-title_theme_dark {
+  position: relative;
+
   color: white;
 }
 
 .section-subtitle_theme_dark {
+  position: relative;
+
   color: white;
 }
 
 .kaufman__triangle {
   margin: 0;
   padding: 0;
-  background-image: url(../images/kaufman-triangle.svg);
-  background-repeat: no-repeat;
-  background-size: 880px 870px;
-  position: absolute;
   width: 877px;
   height: 877px;
+
+  background-image: url(../images/kaufman-triangle.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  position: absolute;
+  top: 0;
   right: -210px;
-  z-index: 1;
+  z-index: -1;
+}
+
+.table_theme_dark {
+  position: relative;
 }
 
 .table__cell_theme_dark {
   width: 200px;
-  color: white;
   margin-right: 0;
   margin-top: 80px;
+}
+
+.table__heading_theme_dark {
+  color: white;
+}
+
+.table__text_theme_dark {
+  color: white;
 }
 
 /* Блок footer */
@@ -340,16 +348,12 @@
   height: 32px;
 }
 
-.footer__author-container {
-  padding: 18px 0;
-  margin: 0;
-  color: white;
-}
-
 .footer__author {
-  margin: 0;
+  padding: 0;
+  margin: 18px 0;
   line-height: 25px;
   font-size: 18px;
+  color: white;
 }
 
 .footer__column_content_info {
@@ -367,7 +371,7 @@
 
 .footer__column-links {
   padding: 0;
-  margin: 0;
+  margin: 0 0 16px;
   display: flex;
   flex-direction: column;
   line-height: 30px;
@@ -393,3 +397,4 @@
   height: 16px;
   margin-right: 10px;
 }
+
