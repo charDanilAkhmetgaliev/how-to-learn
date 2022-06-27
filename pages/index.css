@@ -70,3 +70,6 @@
 /* блок section-subtitle */
 @import url(../blocks/section-subtitle/section-subtitle.css);
 @import url(../blocks/section-subtitle/_theme/section-subtitle_theme_dark.css);
+
+/* блок rotation */
+@import url(../blocks/rotation/rotation.css);
