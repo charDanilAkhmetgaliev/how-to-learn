@@ -1,4 +1,10 @@
 .logo {
-  height: 32px;
+  margin: 0;
+  padding: 0;
   width: 228px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: absolute;
 }

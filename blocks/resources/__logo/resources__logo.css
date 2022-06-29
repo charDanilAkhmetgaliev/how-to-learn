@@ -1,7 +1,7 @@
 .resources__logo {
   margin: 0;
   padding: 0;
+  object-fit: contain;
   width: 270px;
   height: 38px;
-  object-fit: contain;
 }
